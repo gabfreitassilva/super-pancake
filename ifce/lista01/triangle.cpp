@@ -13,7 +13,10 @@ int main() {
         if (valor_1 < valor_2+valor_3 && valor_2 < valor_1+valor_3 && valor_3 < valor_1+valor_2) { // checagem da existência para o triangulo
             cout << "Os valores informados podem formar um trianuglo." << '\n';
             if (valor_1 == valor_2 && valor_2 == valor_3) {
-                cout << "Forma um triangulo escaleno." << '\n';
+                cout << "Forma um triangulo equilatero." << '\n';
+            }
+            else if (valor_1 != valor_2 ) {
+
             }
         }
         else {
