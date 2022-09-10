@@ -1,5 +1,4 @@
 #include <stdio.h>
-//#include <stdlib.h>
 
 int main() {
     int numero[10];
@@ -16,6 +15,6 @@ int main() {
         }
     }
 
-    //system("pause");
+    printf("\n");
     return 0;
 }
