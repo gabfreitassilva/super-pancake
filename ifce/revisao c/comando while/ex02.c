@@ -1,23 +1,29 @@
 #include <stdio.h>
-//#include <stdlib.h>
+#include <math.h>
 
 int main() {
-    int numero, contador=2;
+    int numero, aux = 0, i = 1;
 
-    printf("Digite um numero qualquer: ");
+    printf("Digite um numero: ");
     scanf("%d", &numero);
 
-    while (contador<=numero) {
-        if (numero%contador==0) {
-            printf("nao e primo.\n");
-            break;
-        } else if (numero%contador!=0) {
-            printf("e primo\n");
+    while (i <= numero) {
+        if (numero % i == 0) {
+            aux++;
+        }
+
+        if (aux > 2) {
             break;
         }
-        contador++;
+
+        i++;
     }
 
-    //system("pause");
+    if (aux > 2) {
+        printf("nao e primo\n");
+    } else {
+        printf("e primo\n");
+    }
+
     return 0;
 }
