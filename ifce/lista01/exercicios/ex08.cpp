@@ -13,7 +13,7 @@ int main() {
 
     cout << "Informe o segundo tempo HH:MM:SS> ";
     cin >> hora >> minuto >> segundo;
-    aux -= (hora * 3600) + (minuto * 60) + segundo; // diferença entre os tempos
+    aux -= (hora * 3600) + (minuto * 60) + segundo; // diferença entre os tempos em segundos
 
     hora = aux / 3600; // segundo para hora
     minuto = (aux % 3600) / 60; // segundo para minuto
