@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int valorInput[10], qtdDivsor[10] = {0};
+    int valorInput[10], qtdDivsor[10] = {0}; // as duas variaveis se correlacionam
 
     printf("Entre com 10 numeros inteiros e descubra qual deles e primo.\n");
     for (int i = 0; i < 10; i++) {
@@ -18,7 +18,7 @@ int main() {
     printf("Os numeros primos digitados foram: ");
     for (int i = 0; i < 10; i++) {
         if (qtdDivsor[i] < 2) {
-            printf("%d ", valorInput[i]);
+            printf("%d ", valorInput[i]); // imrprime o valor que foi digitado se os seus divisores forem menores que 2
         }
     }
     printf("\n");
