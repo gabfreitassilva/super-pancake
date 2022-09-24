@@ -1,25 +1,24 @@
 #include <stdio.h>
-// #include <stdlib.h>
 
 int main() {
     int idade[8], faixa_1a10=0, faixa_11a20=0, faixa_21a30=0, faixa_31mais=0;
     float peso[8], mediaPeso_1a10, mediaPeso_11a20, mediaPeso_21a30, mediaPeso_31mais;
 
-    for (int pessoa=0; pessoa<8; pessoa++) {
+    for (int pessoa = 0; pessoa < 8; pessoa++) {
         printf("\nDigite uma idade: ");
         scanf("%d", &idade[pessoa]);
         printf("Digite um peso:kg ");
         scanf("%f", &peso[pessoa]);
     }
 
-    for (int i=0; i<8; i++) {
-        if (idade[i]>=1 && idade[i]<=10) {
+    for (int i = 0; i < 8; i++) {
+        if (idade[i] >= 1 && idade[i] <= 10) {
             faixa_1a10++;
             mediaPeso_1a10 += peso[i];
-        } else if (idade[i]>=11 && idade[i]<=20) {
+        } else if (idade[i] >= 11 && idade[i] <= 20) {
             faixa_11a20++;
             mediaPeso_11a20 += peso[i];
-        } else if (idade[i]>=21 && idade[i]<=30) {
+        } else if (idade[i] >= 21 && idade[i] <= 30) {
             faixa_21a30++;
             mediaPeso_21a30 += peso[i];
         } else {
@@ -40,6 +39,5 @@ int main() {
     printf("A media de peso da faixa etaria 21 a 30: %.2f\n", mediaPeso_21a30);
     printf("A media de peso da faixa etaria 31 mais: %.2f\n", mediaPeso_31mais);
 
-    // system("pause");
     return 0;
 }

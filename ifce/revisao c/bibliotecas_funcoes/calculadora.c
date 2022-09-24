@@ -44,4 +44,6 @@ int primo(int x) {
         return 0;
     }
 
+    
+
 }

@@ -6,6 +6,7 @@ using std::cin;
 int main() {
     int userNumero[5], aux;
 
+    cout << "Informe a seguir 5 numeros inteiros.\n";
     for (int i = 0; i < 5; i++) {
         cout << "Informe um numero inteiro: ";
         cin >> userNumero[i];
@@ -21,6 +22,7 @@ int main() {
         }
     }
 
+    cout << "O numeros em ordem crescente fica: ";
     for (int i = 0; i < 5; i++) {
         cout << userNumero[i] << " ";
     }
