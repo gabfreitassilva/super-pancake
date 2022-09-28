@@ -10,7 +10,7 @@ int main() {
     cin >> numero[0] >> numero[1] >> numero[2];
     
     for (int i = 0; i < 3; i++) {
-        if (i == 0) {
+        if (i == 0) { // inicializando as variaveis maior e menor
             maior = numero[i];
             menor = numero[i];
         } else if (numero[i] > maior) {

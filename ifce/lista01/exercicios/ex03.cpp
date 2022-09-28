@@ -1,10 +1,10 @@
 #include <iostream>
 #include <iomanip>
 
+using std::setprecision; // iomanip
+using std::fixed; // iomanip
 using std::cout;
 using std::cin;
-using std::setprecision;
-using std::fixed;
 
 int main() {
     double nota1, nota2, nota3, media, notaFinal;
@@ -18,7 +18,7 @@ int main() {
 
     media = ((nota1 * 1) + (nota2 * 2) + (nota3 * 3)) / (1 + 2 + 3);
     
-    cout << setprecision(2) << fixed << '\n';
+    cout << setprecision(2) << fixed << '\n'; // formatação das casas decimais
     cout << "Media igual a: " << media;
 
     if (media >= 7) {

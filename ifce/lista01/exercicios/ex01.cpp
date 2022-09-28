@@ -8,6 +8,7 @@ int main() {
     int a, b, c, delta;
     double raiz;
 
+    cout << "Equacao do segundo grau" << '\n';
     cout << "Informe o coeficiente a: ";
     cin >> a;
     cout << "Informe o coeficiente b: ";
