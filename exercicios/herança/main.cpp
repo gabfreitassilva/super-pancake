@@ -82,8 +82,26 @@ void Automovel::exibir() {
 
 class Motocicleta : public Veiculos {
     private:
-        
+        int velocidadeMaxima;
+    public:
+        int cilindradas;
+        void fixaVelocidade(int valor);
+        int obtemVelocidade();
 };
+
+void Motocicleta::fixaVelocidade(int valor) {
+    cilindradas = valor;
+    if (cilindradas < 100) {
+        velocidadeMaxima = 150;
+    } else if (cilindradas < 200) {
+        velocidadeMaxima = 220;
+    } else {
+        velocidadeMaxima = 330;
+    }
+}
+int Motocicleta::obtemVelocidade() {
+    return velocidadeMaxima;
+}
 
 int main() {
     Caminhao caminhao[2];
@@ -119,5 +137,22 @@ int main() {
     caminhao[1].exibir();
     cout << "---------------------------------------------------\n";
 
+
+    Motocicleta moto;
+    int cc;
+
+    cout << "Quantas cilindradas tem a mota (0 - 300): ";
+    cin >> cc;
+    cout << "Quantos passageiros: ";
+    cin >> passageiros;
+
+    moto.fixaVelocidade(cc);
+    moto.fixaPassageiros(passageiros);
+
+    cout << "-------------------MOTO CADASTRADA-----------------\n";
+    cout << "Velocidade: " << moto.obtemVelocidade() << '\n';
+    cout << "Passageiros: " << moto.obtemPassageiros() << '\n';
+    cout << "---------------------------------------------------\n";
+    
     return 0;
 }
