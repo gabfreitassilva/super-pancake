@@ -2,6 +2,10 @@
 using std::cout;
 using std::cin;
 
+#include <string>
+using std::getline;
+using std::string;
+using std::ws;
 class Veiculos {
     private:
         int rodas, passageiros;
@@ -103,6 +107,38 @@ int Motocicleta::obtemVelocidade() {
     return velocidadeMaxima;
 }
 
+enum classe {economica, executiva, primeiraClasse};
+class Aviao : public Veiculos {
+    private:
+        enum classe classe;
+    public:
+        void fixaClasse(enum classe c);
+        enum classe obtemClasse();
+        void exibir();
+};
+
+void Aviao::fixaClasse(enum classe c) {
+    classe = c;
+}
+enum classe Aviao::obtemClasse() {
+    return classe;
+}
+void Aviao::exibir() {
+    cout << "Passageiros: " << obtemPassageiros() << '\n';
+    cout << "Classe da passagem: ";
+    switch (obtemClasse()) {
+        case economica:
+            cout << "economica\n";
+            break;
+        case executiva:
+            cout << "executiva\n";
+            break;
+        case primeiraClasse:
+            cout << "primeira classe\n";
+            break;
+    }
+}
+
 int main() {
     Caminhao caminhao[2];
     int rodas, passageiros, carga;
@@ -137,7 +173,6 @@ int main() {
     caminhao[1].exibir();
     cout << "---------------------------------------------------\n";
 
-
     Motocicleta moto;
     int cc;
 
@@ -154,5 +189,22 @@ int main() {
     cout << "Passageiros: " << moto.obtemPassageiros() << '\n';
     cout << "---------------------------------------------------\n";
     
+    Aviao aviao;
+    string passagem;
+
+    cout << "Quantos passageiros no aviao: ";
+    cin >> passageiros;
+    cout << "Qual a classe da passagem (ecnomica - executiva - primeira classe): ";
+    getline(cin >> ws, passagem);
+    aviao.fixaPassageiros(passageiros);
+    if (passagem == "economica") {
+        aviao.fixaClasse(economica);
+    } else if (passagem == "executiva") {
+        aviao.fixaClasse(executiva);
+    } else if (passagem == "primeira classe") {
+        aviao.fixaClasse(primeiraClasse);
+    }
+    aviao.exibir();
+
     return 0;
 }
