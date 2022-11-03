@@ -23,7 +23,7 @@ void Caixa::area() {
 }
 
 enum cor {azul, verde, preto};
-class CaixaColor : public Caixa {
+class CaixaFesta : public Caixa {
     private:
         enum cor cor;
     public:
@@ -32,13 +32,13 @@ class CaixaColor : public Caixa {
         void exibir();
 };
 
-void CaixaColor::fixaCorCaixa(enum cor c) {
+void CaixaFesta::fixaCorCaixa(enum cor c) {
     cor = c;
 }
-enum cor CaixaColor::obtemCorCaixa() {
+enum cor CaixaFesta::obtemCorCaixa() {
     return corCaixa;
 }
-void CaixaColor::exibir() {
+void CaixaFesta::exibir() {
     cout << "Cor da caixa: ";
     switch (obtemCorCaixa()) {
         case azul:
