@@ -1,6 +1,8 @@
 #include <iostream>
+using std::string;
 using std::cout;
 using std::cin;
+using std::ws;
 
 class Caixa {
     private:
@@ -36,7 +38,7 @@ void CaixaFesta::fixaCorCaixa(enum cor c) {
     cor = c;
 }
 enum cor CaixaFesta::obtemCorCaixa() {
-    return corCaixa;
+    return cor;
 }
 void CaixaFesta::exibir() {
     cout << "Cor da caixa: ";
@@ -55,7 +57,7 @@ void CaixaFesta::exibir() {
 
 int main() {
 
-    CaixaColor caixa;
+    CaixaFesta caixa;
     string cor;
     double altura, largura;
 
